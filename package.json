@@ -1,17 +1,31 @@
 {
-  "name": "financial-risk",
-  "version": "1.0.0",
-  "description": "Platform for company search in risk portals",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "risk"
-  ],
-  "author": "Junior Rodrigo",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.7.7"
-  }
+	"name": "financial-risk",
+	"version": "1.0.0",
+	"description": "Platform for company search in risk portals",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon server.js"
+	},
+	"keywords": [
+		"risk"
+	],
+	"author": "Junior Rodrigo",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^1.7.7",
+		"cheerio": "^1.0.0",
+		"dotenv": "^16.4.5",
+		"express": "^4.21.0",
+		"https-proxy-agent": "^7.0.5",
+		"module-alias": "^2.2.3",
+		"puppeteer": "^23.4.0"
+	},
+	"_moduleAliases": {
+		"@common": "source/common",
+		"@riskAnalizer": "source/risk-analizer"
+	},
+	"devDependencies": {
+		"prettier": "^3.3.3"
+	}
 }
