@@ -6,22 +6,25 @@ const { generateProxyHostAndPort } = require("./services/proxyService");
 const evaluateRiskInOsl = async (entity) => {
 	const categoriesToSearch = ["offshore-entities"]; //"officers", "intermediaries", "addresses"
 
-	for (const category of categoriesToSearch) {
-		const result = await searchByCategory(category, entity);
-	}
-	return;
-};
-const evaluateRiskInWorldBank = async () => {};
+	let result = {};
 
-const evaluateRiskInOfac = async () => {};
+	for (const category of categoriesToSearch) {
+		result = await searchByCategory(category, entity);
+	}
+	return result;
+};
+
+const evaluateRiskInWorldBank = async () => { };
+
+const evaluateRiskInOfac = async () => { };
 
 // This function evaluates the risk of a company in all the databases
 module.exports.evaluateRisk = async (req, res) => {
 	try {
 		const { entity, officer, intermediarie, address } = req.body;
 		// console.log(entity);
-		await evaluateRiskInOsl(entity);
-		res.success(1);
+		const riskEvaluation = await evaluateRiskInOsl(entity);
+		res.success(riskEvaluation);
 	} catch (error) {
 		console.log(error);
 		res.error(error);
