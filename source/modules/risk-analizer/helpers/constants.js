@@ -1,7 +1,10 @@
-module.exports.cookiex =
+// OSL Section  _______________________________________________________________________________________________________
+module.exports.oslBaseUrl = "https://offshoreleaks.icij.org";
+
+module.exports.oslCookies =
 	"_gid=GA1.2.321073196.1726717630; terms.accept=1; disclaimer.collapsed=1; _ga=GA1.2.1883019273.1726717629; _ga_PJ4Y19JL7T=GS1.1.1726722156.2.1.1726722548.60.0.0; aws-waf-token=a4c98636-b22f-4913-9a45-1dc167dc718e:EAoAn5kj81gPAAAA:N/7zw4220P6TfiKt/HL3W9Mg9m5viRkdTBEApajWXx3VKBqtwLsxd55+i40WYBioCd95Pw5WcOgz7RYx0vULlUWxD4kgUFkdVVj2k4baHUU+6jX0wrs1SlQnqCfFGADW09+oYSvA9WfzkG2zF5l8qxnFmPp4cwKUpo14Fjq1d4CQfZXghXF0Dr7Ws3PnDHGTtqi+pmA6xNbDW0HTrm2iQt8=";
 
-module.exports.userAgents = [
+module.exports.oslUserAgents = [
 	"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36",
 	"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36",
 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36",
@@ -53,7 +56,7 @@ module.exports.userAgents = [
 	"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36",
 ];
 
-module.exports.secChUaPlatforms = [
+module.exports.oslSecChUaPlatforms = [
 	"Windows",
 	"macOS",
 	"Linux",
@@ -76,7 +79,7 @@ module.exports.secChUaPlatforms = [
 	"KaiOS",
 ];
 
-module.exports.secChUas = [
+module.exports.oslSecChUas = [
 	'"Chromium";v="90", "Not;A=Brand";v="99", "Google Chrome";v="90"',
 	'"Firefox";v="88", "Not;A=Brand";v="99", "Gecko";v="88"',
 	'"Microsoft Edge";v="91", "Not;A=Brand";v="99", "Chromium";v="91"',
@@ -98,3 +101,32 @@ module.exports.secChUas = [
 	'"Luakit";v="2.0", "Not;A=Brand";v="99", "WebKit";v="2.0"',
 	'"IceCat";v="68", "Not;A=Brand";v="99", "Gecko";v="68"',
 ];
+
+// World Bank Section _________________________________________________________________________________________________
+worldBankBaseUrl = "https://apigwext.worldbank.org/";
+worldBankUrlParams = "dvsvc/v1.0/json/APPLICATION/ADOBE_EXPRNCE_MGR/FIRM/SANCTIONED_FIRM";
+
+module.exports.worldBankFullUrl = worldBankBaseUrl + worldBankUrlParams;
+
+module.exports.worldBankHeaders = {
+	accept: "application/json,text/javascript,*/*;q=0.01",
+	"accept-encoding": "gzip,deflate,br,zstd",
+	"accept-language": "es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,es-PE;q=0.5,es-MX;q=0.4",
+	apikey: "z9duUaFUiEUYSHs97CU38fcZO7ipOPvm",
+	"cache-control": "no-cache",
+	"content-type": "application/json;charset=utf-8",
+	dnt: "1",
+	origin: worldBankBaseUrl,
+	pragma: "no-cache",
+	priority: "u=1,i",
+	referer: worldBankBaseUrl + "/",
+	"sec-ch-ua": '"Chromium";v="128","Not;A=Brand";v="24","Microsoft Edge";v="128"',
+	"sec-ch-ua-mobile": "?0",
+	"sec-ch-ua-platform": '"Windows"',
+	"sec-fetch-dest": "empty",
+	"sec-fetch-mode": "cors",
+	"sec-fetch-site": "same-site",
+	"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0",
+	Cookie:
+		"__cf_bm=tZn1lMDDYHvKwZLdm2kppbQYOkZnYLBbyL4pTQHZOmA-1726923464-1.0.1.1-F9OvqGK2_dEBwvRHw6O16BrXPQphx6YPBLkhst6SHhTAnOof1wS3nIH_j4xhJ3m7cpSUJBF7grYTvAwBnjsiFw; TS01fa65e4=017189f947a48081e6ea39ea9060bb7bdb376091269fa1c364f65174156902c25a2602b15a8ab927804369c495bdf48674003b88e3feccf38b1a54ba5827f86aa229296131; apigwext_ext.cookie=1788981258.47873.0000",
+};

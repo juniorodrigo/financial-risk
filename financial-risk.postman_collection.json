@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "3795454c-e710-4ff3-aee3-2fdb605c77a9",
+		"name": "financial-risk",
+		"description": "Postman workspace for the financial-risk project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38443955"
+	},
+	"item": [
+		{
+			"name": "risk-evaluation",
+			"item": [
+				{
+					"name": "offshore-leaks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "$2b$04$Bt4dbS2VsyGhdyiBtMizFO0mNzJaKMWO7sH.o.jJBg26oSNa6/5FW",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entityName\": \"TEST\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/evaluate-risk/offshoreleaks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"evaluate-risk",
+								"offshoreleaks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "worldbank",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "$2b$04$Bt4dbS2VsyGhdyiBtMizFO0mNzJaKMWO7sH.o.jJBg26oSNa6/5FW",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entityName\": \"TEST\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/evaluate-risk/worldbank",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"evaluate-risk",
+								"worldbank"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "generate-key",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entityName\": \"DE LIMA TRADING N.V. (I.L.)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/authn/generate-key",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authn",
+								"generate-key"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
